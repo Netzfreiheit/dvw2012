@@ -221,13 +221,13 @@ header nav .active a {
 	background-image: url(../img/bg-nav.png), linear-gradient(top, #4F4F4F, ##161616); 
 }
 
-.uitleg {
+.description {
 	font-family: DINWeb-Cond, sans-serif;
 	font-size: 18px;
 	margin: 15px 0 0;
 }
 
-.uitleg > span {
+.description > span {
 	font-weight: bold;
 	height: 32px;
 	font-size: 22px;
@@ -240,16 +240,16 @@ header nav .active a {
 	color: #efefef;
 }
 
-.uitleg > span.vrij {
+.description > span.good {
 background: #7BB847;
 color: #BDDBA3;
 }
 
-.uitleg > span.onvrij {
+.description > span.bad {
 background: #E13434;
 color: #F09999;
 }
-.uitleg > span.meh {
+.description > span.meh {
 background: #EDAB70;
 color: #F6D5B7;
 }
@@ -331,7 +331,7 @@ table#overzicht {
 			background: #f0f0f0;	
 		}
 	
-	td.onderwerp { 
+	td.topic { 
 		width: 160px;
 		border-top: dotted 1px #ccc;
 		font-size: 16px;
@@ -339,7 +339,7 @@ table#overzicht {
 		background: #fff;
 	}
 	
-	td.onderwerp a, tr.eindoordeel td.onderwerp a {
+	td.topic a, tr.summary td.topic a {
 		display: block;		
 		color: #222;
 		font-family:DINWeb-Cond, sans-serif;
@@ -350,15 +350,15 @@ table#overzicht {
 		text-indent: 0px;
 		text-decoration: none;
 	}
-	.lt-ie9 td.onderwerp a { padding: 4px 0 6px; }
+	.lt-ie9 td.topic a { padding: 4px 0 6px; }
 		
-		tr.eindoordeel td.onderwerp a {		
+		tr.summary td.topic a {		
 			font-size: 26px;
 			line-height: 30px;
 			padding: 9px 7px 1px;		
 		}
 		
-			td.onderwerp a:hover, tr.eindoordeel td.onderwerp a:hover, tr.standpunt:hover td.onderwerp a {			
+			td.topic a:hover, tr.summary td.topic a:hover, tr.standpoint:hover td.topic a {			
 				color: #000;
 				background: #f0f0f0;			
 			}
@@ -389,30 +389,30 @@ table#overzicht {
 		text-decoration: none;
 	} 
 	
-	td.onvrij,
-	td.onvrij a {
+	td.bad,
+	td.bad a {
 		background: #E13434;
 		color: #F09999;
 	}
-	.eindoordeel td.onvrij a {
+	.summary td.bad a {
 		background: #D90000;
 		color: #fff;
 	}
-		td.onvrij a:hover, .eindoordeel td.onvrij a:hover{
+		td.bad a:hover, .summary td.bad a:hover{
 			background: #D90000;
 			color: #fff;
 		}
 	
-	td.vrij,
-	td.vrij a {
+	td.good,
+	td.good a {
 		background: #7BB847;
 		color: #BDDBA3;
 	}
-	.eindoordeel td.vrij a{
+	.summary td.good a{
 		background: #59A618;
 		color: #fff;
 	}
-		td.vrij a:hover, .eindoordeel td.vrij a:hover{
+		td.good a:hover, .summary td.good a:hover{
 			background: #59A618;
 			color: #fff;
 		}
@@ -422,24 +422,24 @@ table#overzicht {
 		background: #EDAB70;
 		color: #F6D5B7;
 	}
-	.eindoordeel td.meh a{
+	.summary td.meh a{
 			background: #E9954C;
 			color: #fff;
 	}
-		td.meh a:hover, .eindoordeel td.meh a:hover{
+		td.meh a:hover, .summary td.meh a:hover{
 			background: #E9954C;
 			color: #fff;
 		}
 	
-	tr.eindoordeel td {
+	tr.summary td {
 		border-bottom: 1px dotted #fff;
 	}
 	
-	tr.eindoordeel td.onderwerp {
+	tr.summary td.topic {
 		border-bottom: 1px dotted #ccc;
 	}
 	
-	.eindoordeel {
+	.summary {
 		text-transform: uppercase;
 	}
 	
@@ -500,8 +500,8 @@ section aside + dt,
 }
 
 
-dt .vrij { color: #59A618; text-transform: uppercase; }
-dt .onvrij { color: #D90000; text-transform: uppercase; }
+dt .good { color: #59A618; text-transform: uppercase; }
+dt .bad { color: #D90000; text-transform: uppercase; }
 dt .meh { color: #E9954C; text-transform: uppercase; }
 
 section dd {

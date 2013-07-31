@@ -11,7 +11,7 @@ $('#overlay').overlay({
 });
 
 
-$(".standpunt a, .eindoordeel td:not(':first-child') a").click(function(e){
+$(".standpoint a, .summary td:not(':first-child') a").click(function(e){
 	
 	var d = $( '<div class="inner">' );
 	var t = $(e.target).attr('href');
@@ -46,20 +46,20 @@ $("nav.sub a").click(function(e){
 });
 
 //table cell behaviors	
-$('#overzicht td[class!=onderwerp]').bind("mouseenter",function() {
+$('#overview td[class!=topic]').bind("mouseenter",function() {
 	
 	// highlight headers on cell over
-	$('#overzicht th').removeClass('highlight'); 
+	$('#overview th').removeClass('highlight'); 
 		
 	var index = $(this).parent().children().index(this);	
-	 $('#overzicht').each(function() {
+	 $('#overview').each(function() {
 	  $(':nth-child(' + (index + 1) + ')' ,this).addClass('highlight');
 	});
 	
 	//remove highlights when not needed
 	}).bind("mouseleave",function(){
 		  var index = $(this).parent().children().index(this);	
-			$('#overzicht').each(function() {
+			$('#overview').each(function() {
 				  $(':nth-child(' + (index + 1) + ')' ,this).removeClass('highlight');
 			})
 });
