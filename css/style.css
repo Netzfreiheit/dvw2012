@@ -316,7 +316,7 @@ table#overzicht {
 		border-right: dotted #ccc 1px;
 	}
 	
-	th.partij {
+	th.party {
 		background: ;
 		font-family:DINWeb-Cond, sans-serif;
 		font-weight: bold;
@@ -327,7 +327,7 @@ table#overzicht {
 		font-size: 22px;
 	}
 		
-		#partijen th.highlight {			
+		#party th.highlight {			
 			background: #f0f0f0;	
 		}
 	
