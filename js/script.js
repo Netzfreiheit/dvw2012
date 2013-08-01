@@ -21,13 +21,15 @@ $(".standpoint a, .summary td a").click(function(e){
 	$(t).next().clone().appendTo(d);
 	$(t).closest('section').find('a.back').clone().appendTo(d).click(function(e) {
 		$('#overlay').overlay().close();
+		window.location.hash = '';
+		history.pushState('', document.title, window.location.pathname);
 		e.preventDefault();
 		$('#overlay').scrollTop(0);
 	});
 	
 	$('#overlay').append(d);	
 	$('#overlay').overlay().load();	
-});
+});	
 
 $("nav.sub a").click(function(e){
 	
