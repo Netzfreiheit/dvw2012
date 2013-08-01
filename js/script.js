@@ -10,8 +10,7 @@ $('#overlay').overlay({
 	}
 });
 
-
-$(".standpoint a, .summary td:not(':first-child') a").click(function(e){
+$(".standpoint a, .summary td a").click(function(e){
 	
 	var d = $( '<div class="inner">' );
 	var t = $(e.target).attr('href');
