@@ -620,13 +620,13 @@ footer a.facebook:hover {
 footer a.bof {
 	display: inline-block;
 	text-indent: -999em;
-	background: url(../img/bof_logo_rgb.svg) no-repeat;
+	background: url(../img/ifnf_logo_rgb.png) no-repeat;
 	height: 60px;
 	width: 220px;
 }
 .lt-ie9 footer a.bof {
 	display: block;
-	background: url(../img/bof_logo_rgb.png) no-repeat;
+	background: url(../img/ifnf_logo_rgb.png) no-repeat;
 }
 
 footer .license {
