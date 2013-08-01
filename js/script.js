@@ -20,7 +20,7 @@ $(".standpoint a, .summary td:not(':first-child') a").click(function(e){
 	$(t).closest('section').find('aside').clone().appendTo(d);
 	$(t).clone().appendTo(d);
 	$(t).next().clone().appendTo(d);
-	$(t).closest('section').find('a.terug').clone().appendTo(d).click(function(e) {
+	$(t).closest('section').find('a.back').clone().appendTo(d).click(function(e) {
 		$('#overlay').overlay().close();
 		e.preventDefault();
 		$('#overlay').scrollTop(0);
@@ -37,7 +37,7 @@ $("nav.sub a").click(function(e){
 	
 	$(t).clone().contents().appendTo(d);	
 	$('#overlay').append(d);
-	$('#overlay').find('a.terug').click(function() {
+	$('#overlay').find('a.back').click(function() {
 		$('#overlay').overlay().close();
 		e.preventDefault();
 		$('#overlay').scrollTop(0);

@@ -508,7 +508,7 @@ section dd {
 	margin: 0 0 15px 0;
 }
 
-a.terug {
+a.back {
 	display: block;
 	border-top: 1px dotted #ccc;
 	color: #59A618; 
@@ -520,22 +520,22 @@ a.terug {
 	padding: 15px 0 10px 30px;
 	background: url(../img/icon-back-up.svg) no-repeat 0 18px;	
 }
-.lt-ie9 a.terug {	
+.lt-ie9 a.back {	
 	background: url(../img/icon-back-up.png) no-repeat 0 18px;	
 }
 
-a.terug:hover {
+a.back:hover {
 	background-position:  0 -22px
 }
 
-#overlay a.terug {
+#overlay a.back {
 	background: url(../img/icon-back-left.svg) no-repeat 0 18px;
 }
-.lt-ie9 #overlay a.terug {
+.lt-ie9 #overlay a.back {
 	background: url(../img/icon-back-left.png) no-repeat 0 18px;
 }
 
-#overlay a.terug:hover {
+#overlay a.back:hover {
 	background-position:  0 -22px
 }
 	
