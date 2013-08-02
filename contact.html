@@ -52,9 +52,34 @@
   </header>
   <div class="content" role="main">
   <section class="page">
-  	<h1>Contact / Pers</h1>
+  	<h1>Contact / Presse</h1>
 
-    <p>Neem voor vragen contact op met Tim Toornvliet, bereikbaar op het telefoonnummer +31(0)6 1860 6472 en het e-mailadres <a href="mailto:tim.toornvliet@bof.nl">tim.toornvliet@bof.nl</a>. Als je wilt, kan hij je ook op de pers-mailinglijst plaatsen. Dan blijf je altijd op de hoogte van het laatste nieuws van Bits of Freedom.</p>
+    <p>Fragen und Kommentare zu diesem Projekt meldet euch bitte bei <span class="mailcheat" locip="info" domip="netzfreiheit.org">info /at/ netzfreiheit.org</span>. </p>
+
+    <p>
+      Presseanfragen gehen bitte an unseren Sprecher <span class="mailcheat" locip="thomas.lohninger" domip="netzfreiheit.org" inner="Thomas Lohninger">thomas.lohninger /at/ netzfreiheit.org</span>. 
+
+      Fragen zum Themengebiet eines unserer Kooperationspartner können auch direkt an diese gestellt werden:
+      <ul>
+        <li>AKVorrat: <span class="mailcheat" locip="info" domip="akvorrat.at">info /at/ akvorrat.at</span></li>
+        <li>Transparenzgesetz: </li>
+      </ul>
+    </p>
+
+    <p>
+      Diese Homepage wird betreut von der <a href="https://netzfreiheit.org/">Initiative für Netzfreiheit</a> Verein zur Förderung der Freiheiten des Menschen im Netz und Wahrung der digitalen Bürgerrechte.
+    <p>
+
+    <p>
+      ZVR-Zahl: 675848645<br/>
+      Sitz: Wien<br/>
+      Mitglieder des Vorstandes: Andreas Demmelbauer, Leonhard Preis<br/>
+      vorstand@netzfreiheit.org<br/>
+      <br/>
+      Offenlegung gem. österreichischem Mediengesetz, <a href="http://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Bundesnormen&Dokumentnummer=NOR40104328">§25</a>.
+    <p>
+
+
   	
   </section>
   </div>
@@ -76,5 +101,17 @@
   <script src="js/libs/jquery-1.7.1.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+  <script type="text/javascript">
+     <!--
+    $(function () {
+     $('span.mailcheat').each(
+       function (i, el) {
+         console.log(el, el.innerText); 
+         var mail = $(el).attr('locip') + '@' + $(el).attr('domip');
+         $(el).html('<a href="mailto:' + mail + '">' + ($(el).attr('inner') || mail || el.innerText || 'mail') + '</a>');
+      });
+    });
+     //-->
+  </script>
 </body>
 </html>
