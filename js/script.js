@@ -17,7 +17,9 @@ $(".standpoint a, .summary td a").click(function(e){
 	
 	$(t).closest('section').find('h1').clone().appendTo(d);
 	$(t).closest('section').find('aside').clone().appendTo(d);
+	$(t).closest('section').find('ol').clone().appendTo(d);
 	$(t).clone().appendTo(d);
+
 	$(t).next().clone().appendTo(d);
 	$(t).closest('section').find('a.back').clone().appendTo(d).click(function(e) {
 		$('#overlay').overlay().close();
