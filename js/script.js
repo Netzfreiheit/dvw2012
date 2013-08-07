@@ -7,24 +7,48 @@ $('#overlay').overlay({
 	onClose: function(){
 		var o = this.getOverlay();		
 		o.find('.inner').remove();
+		clearHash();
 	}
 });
 
 $(".standpoint a, .summary td a").click(function(e){
 	
-	var d = $( '<div class="inner">' );
-	var t = $(e.target).attr('href');
+	var d = $( '<div class="inner">' ); // wrapper
+	var t = $(e.target).attr('href');  // id / anchor
+	var questions, answers; 
 	
 	$(t).closest('section').find('h1').clone().appendTo(d);
 	$(t).closest('section').find('aside').clone().appendTo(d);
-	$(t).closest('section').find('ol').clone().appendTo(d);
-	$(t).clone().appendTo(d);
+	
+	if ((t + '').indexOf('-description') !== -1) {  // only topic description and questions
+		$(t).closest('section').find('h2:first').clone().appendTo(d);
+		$(t).closest('section').find('ol:first').clone().appendTo(d);	
+	}
+	else {  // party answers
+		$(t).clone().appendTo(d); // header 
 
-	$(t).next().clone().appendTo(d);
+		// questions and answers
+		questions = $(t).closest('section').find('ol:first > li').clone();
+		answers = $(t).next().find('ol > li').clone();
+
+		if (answers.length === questions.length) {  // display questions with answers
+			for (var i = 0; i < questions.length; i++) {
+				$(d).append('<h3>' + $(questions[i]).html() + '</h3>');
+				$(d).append('<p>' + $(answers[i]).html() + '</p>');
+			}	
+		} 
+		else {  // display only questions
+			$(t).closest('section').find('h2:first').clone().appendTo(d);
+			$(t).closest('section').find('ol:first').clone().appendTo(d);	
+		}
+		
+
+		$(t).next().find(':not(ol,li)').clone().appendTo(d); // appendix 
+	}
+	
 	$(t).closest('section').find('a.back').clone().appendTo(d).click(function(e) {
 		$('#overlay').overlay().close();
-		window.location.hash = '';
-		history.pushState('', document.title, window.location.pathname);
+		clearHash();
 		e.preventDefault();
 		$('#overlay').scrollTop(0);
 	});
@@ -75,4 +99,10 @@ if (document.location.hash != '') {
 	}
 }
 
-
+/**
+ * clears the hash out of address bar in case of closed dialog
+ **/
+function clearHash () { 
+	window.location.hash = '';
+	history.pushState('', document.title, window.location.pathname);
+}
