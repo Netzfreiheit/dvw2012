@@ -104,19 +104,19 @@ td { vertical-align: top; }
 html, body {min-height: 100%;}
 
 body {
-	background: #111;
 	margin: 0px;
 	padding: 20px 0 0 0;
 	line-height: 25px;	
-	background:#333;
-/*	
-	background: url(../img/dot_bg_black_25.png) fixed,
- url(../img/bg-body.png) fixed;
-background-color: #333; 
-*/
-
-background-size: 2px 2px, 1920px 1080px;
-background-position: 0 0, center center;
+	background: 
+		url(../img/dot_bg_black_25.png) fixed,
+		/* url(../img/bg-body.png) fixed; */
+		url(../img/bg-parlament.jpg) fixed;
+	
+	background-color: #91C2FF; 
+	background-size: 2px 2px, 1920px 1080px;
+	background-position: 0 0, center top;
+	background-repeat: repeat, no-repeat;
+	
 }
 
 
@@ -246,8 +246,8 @@ background-position: 0 0, center center;
 }
 
 .sub {
-	margin: 2em 0 -1.4em;
-	font-size:1.2em;
+	margin: 1.4em 0 -1.3em;
+	font-size:1.6em;
 	text-shadow: rgba(0,0,0,.7) 0 2px 1px;
 }
 
@@ -256,7 +256,7 @@ background-position: 0 0, center center;
 {
 	content: "";
 	display: inline-block;
-	width: 8em;
+	width: 6em;
 	height: .3em;
 	border-bottom: #fff 2px solid;
 	margin: 0 .7em;
@@ -266,12 +266,10 @@ background-position: 0 0, center center;
 
 
 #headline h1 {
-	font-size: 3.6em;
+	font-size: 4.2em;
 	line-height: 1em;
 	margin:.4em 0;
-	text-shadow: rgba(0,0,0,.7) 0 0 4px;
-	text-shadow: rgb(100, 72, 0) 0 1px 0,rgb(131, 94, 0) 0 2px 0, rgb(162, 116, 0) 0 3px 0,rgb(138, 99, 0) 0 4px 0,rgb(111, 67, 0) 0 5px,rgba(0, 0, 0, 0.5) 0 5px 30px;
-	text-shadow: rgba(0, 0, 0, 0.51) 0 3px,rgba(0, 0, 0, 0.5) 0 5px 30px;
+	text-shadow: rgba(0, 0, 0, .5) 0 3px,rgba(0, 0, 0, 0.4) 0 5px 14px
 }
 
 
@@ -294,21 +292,21 @@ background-position: 0 0, center center;
 
 
 .description {
-	font-family: DINWeb-Cond, sans-serif;
-	font-size: 18px;
+	font-size: 14px;
 	margin: 15px 0 0;
+	text-align:center;
 }
 
 .description > span {
 	font-weight: bold;
-	height: 20px;
 	font-size: 22px;
-	padding: 5px;
-	width: 40px;
+	padding: 2px;
+	margin-left:10px;
+	width: 26px;
 	display: inline-block;
 	text-align: center;
 	background: #EFEFEF;
-	color: #efefef;
+	color: #fff;
 }
 
 .description > span.good {
@@ -400,9 +398,9 @@ table#overzicht {
 		min-width:71px;
 	}
 		
-		#party th.highlight {			
-			background: #f0f0f0;	
-		}
+	#parties th.highlight {			
+		background: #f0f0f0;	
+	}
 	
 	td.topic { 
 		width: 160px;
@@ -509,11 +507,12 @@ table#overzicht {
 	}
 	
 	tr.summary td.topic {
-		border-bottom: 1px dotted #ccc;
+		background: #F3F3F3;
 	}
 	
 	.summary {
 		text-transform: uppercase;
+		border-top: #fff 3px solid;
 	}
 	
 nav.sub {
@@ -530,6 +529,15 @@ nav.sub {
 
 section aside {
 	color: #666;
+}
+
+.coop {
+	float:right;
+	margin: 0 0 20px 20px;
+}
+
+.coop > h4 {
+	margin:0;
 }
 
 section dl {
@@ -609,40 +617,89 @@ a.back:hover {
 	background-position:  0 -22px
 }
 	
-footer {
-	padding: 20px 50px;
-	color: #000;
-	background: #fff;
-	font-family: DINWeb-Cond, sans-serif;
-	font-weight: bold;
-	text-transform: uppercase;
-	overflow: auto;
+
+
+	
+	
+	
+	
+	
+/* footer section */
+
+#ifnffooter {
+	color: #fff;
+	text-align:center;
+	font-size: 14px;
+	margin:20px 0 50px;
 }
 
-footer > div:first-child {
-	float: left;
-	width: 226px;
-	padding: 0;
-	text-align: left;
+#ifnffooter:before, 
+#ifnffooter:after {
+	content:".";
+	display:block;
+	border: 14px solid transparent;
+	font-size:0;
+	line-height:0;
 }
 
-footer > div {
-	float: left;
-	width: 140px;
-	padding: 4px 0 0 0;
-	text-align: center;
+#ifnffooter:before {
+	border-bottom-color: rgba(0,0,0,0.7);
+	border-left-color: rgba(0,0,0,0.7);
+	border-top: none;
 }
 
-footer a,
-footer a:visited {
-	color: #000;
+#ifnffooter:after {
+	border-top-color: rgba(0,0,0,0.7);
+	border-right-color: rgba(0,0,0,0.7);
+	border-bottom: none;
 }
 
-footer a:hover {
-	color: #59A618;
+#ifnffooter a {
+	color: #fff;
 	text-decoration: none;
 }
 
+#ifnffooter a:hover {
+	color: #ff0;
+	text-decoration: none;
+}
+
+
+#ifnffooter_inner {
+	background: rgba(0,0,0,0.7);
+}
+
+
+#ifnffooterul {
+	margin:0;
+	padding:0;
+	text-transform:uppercase;
+	font-weight:bold;
+	width:400px;
+	line-height: 1.5em;
+}
+
+#ifnffooter li {
+	display: inline-block;
+	*display:inline;
+	*float:left;
+	padding: 0 6px 0 0;
+}
+
+#ifnffooter li:not(:first-child):before {
+	content: ".";
+	font-size: 4em;
+	margin-right: 6px;
+	line-height: 0;
+}
+
+
+	
+	
+	
+	
+	
+	
 footer a.twitter {
 	display: inline-block;
 	text-indent: -999em;
@@ -656,9 +713,6 @@ footer a.twitter {
 	background: url(../img/social-sprites.png) no-repeat;
 }
 
-footer .bof {
-	
-}
 
 footer .social {
 	margin: 7px 0 0 30px;
@@ -740,10 +794,11 @@ footer .largetosti a:hover {
 
 #overlay {
 	display: none;
-	padding: 20px 130px;
-	width: 720px;
-	height: 770px; 
+	padding: 40px;
+	margin: -25px -40px;
+	height: 770px;
 	background: #fff;
+	box-shadow: rgba(0,0,0,.8) 0 40px 40px -50px;
 	top: 0 !important;
 	left: 0 !important;
 	overflow: auto;
