@@ -27,7 +27,7 @@
 
 }
 
-@import url("fonts/asap.css");
+@import url(fonts/asap.css);
 
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
@@ -38,7 +38,7 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
-body { margin: 0; font-size: 1em; line-height: 1.4; }
+body { margin: 0; font-size: 14px; line-height: 20px; }
 
 ::-moz-selection { background: #0645ad; color: #fff; text-shadow: none; }
 ::selection { background: #FF7000; color: #fff; text-shadow: none; }
@@ -106,7 +106,6 @@ html, body {min-height: 100%;}
 body {
 	margin: 0px;
 	padding: 20px 0 0 0;
-	line-height: 25px;	
 	background: 
 		url(../img/dot_bg_black_25.png) fixed,
 		/* url(../img/bg-body.png) fixed; */
@@ -277,23 +276,27 @@ body {
 
 
 
-#maincontent {
+.maincontent {
 	border-left: 14px rgba(0,0,0,.7) solid;
 	border-right: 14px rgba(0,0,0,.7) solid;
 }
 
-#maincontent_inner {
+.maincontent_inner {
 	background: #fefefe;
 	padding:24px 40px;
+	box-shadow: #000 0 30px 50px -36px;
 }
 
 
-
+.col700 {
+	width:700px;
+	float:left;
+}
 
 
 .description {
 	font-size: 14px;
-	margin: 15px 0 0;
+	margin: 15px 0 0 0;
 	text-align:center;
 }
 
@@ -301,12 +304,12 @@ body {
 	font-weight: bold;
 	font-size: 22px;
 	padding: 2px;
-	margin-left:10px;
 	width: 26px;
 	display: inline-block;
 	text-align: center;
 	background: #EFEFEF;
 	color: #fff;
+	margin-left:15px;
 }
 
 .description > span.good {
@@ -319,7 +322,7 @@ background: #E13434;
 color: #F09999;
 }
 .description > span.meh {
-background: #EDAB70;
+background: #EE9342;
 color: #F6D5B7;
 }
 
@@ -330,7 +333,7 @@ color: #F6D5B7;
 }
 
 .content p {
-	margin: 0 0 25px 0;
+	margin: 0 0 8px 0;
 }
 /*
 .content > div {
@@ -353,19 +356,26 @@ section h1 {
 	padding: 0;
 }
 h2 { 
-	font-size: 32px;
-	margin: 10px 0 15px 0; 
+	font-size: 24px;
+	margin: 30px 0 15px 0;
+	color: #222;
 }
 
-h3 { 
-	font-size: 1.5em;
+h2.intro { 
+	font-size: 1.8em;
 	text-align: center;
-	font-family: Asap;
+	font-family: Asap, sans-serif;
 	font-weight: normal;
 }
 
 h4 {}
 h5 {}
+
+p.intro {
+	font-size:16px;
+	line-height:22px;
+	margin-bottom:30px;
+}
 
 table#overzicht {
 	border-collapse: collapse;
@@ -439,19 +449,19 @@ table#overzicht {
 		border-right: dotted 1px #fff;
 		font-weight: bold;		
 		font-size: 22px;
+		line-height:1em;
 		width: 55px;
 		background: #efefef;
 	}
 	
 	td a {	
 				
-		height: 32px;
+		height: 28px;
 		text-align: center;
 		overflow: hidden;
 		display: block;
-		padding: 10px 0 0 0;
+		padding: 6px 0;
 		color: #fff;
-		/*font-family:DINWeb-Cond, sans-serif;*/
 		text-decoration: none;
 	}
 	
@@ -490,15 +500,15 @@ table#overzicht {
 	
 	td.meh,
 	td.meh a {
-		background: #EDAB70;
+		background: #EE9342;
 		color: #F6D5B7;
 	}
 	.summary td.meh a{
-			background: #E9954C;
+			background: #EE9342;
 			color: #fff;
 	}
 		td.meh a:hover, .summary td.meh a:hover{
-			background: #E9954C;
+			background: #FC953B;
 			color: #fff;
 		}
 	
@@ -550,7 +560,7 @@ section dl {
 	color: #444;
 	font-size: 14px;
 	line-height: 20px;
-	margin: -20px 0 0 0;
+	margin: -10px 0 0 0;
 }
 
 .content aside p {
@@ -670,12 +680,11 @@ a.back:hover {
 }
 
 
-#ifnffooterul {
+#ifnffooter ul {
 	margin:0;
 	padding:0;
 	text-transform:uppercase;
 	font-weight:bold;
-	width:400px;
 	line-height: 1.5em;
 }
 
@@ -718,6 +727,10 @@ footer .social {
 	margin: 7px 0 0 30px;
 }
 
+.smsb {
+	margin-top:-10px;
+}
+
 footer a.twitter:hover {
 	background-position: 0px -35px;
 }
@@ -725,10 +738,11 @@ footer a.twitter:hover {
 footer a.facebook {
 	display: inline-block;
 	text-indent: -999em;
-	background: url(../img/social-sprites.svg) no-repeat -40px 0px;
+	background: url(../img/social-sprites.svg) no-repeat -33px 0px;
 	height: 35px;
 	width: 35px;
 }
+
 .lt-ie9 footer a.facebook {
 	display: block;
 	float: left;
@@ -736,7 +750,7 @@ footer a.facebook {
 }
 
 footer a.facebook:hover {
-	background-position: -40px -35px;
+	background-position: -33px -35px;
 }
 
 footer a.bof {
@@ -796,9 +810,9 @@ footer .largetosti a:hover {
 	display: none;
 	padding: 40px;
 	margin: -25px -40px;
-	height: 770px;
+	height: 680px;
 	background: #fff;
-	box-shadow: rgba(0,0,0,.8) 0 40px 40px -50px;
+	box-shadow: #000 0 40px 40px -50px;
 	top: 0 !important;
 	left: 0 !important;
 	overflow: auto;
