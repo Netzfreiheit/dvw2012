@@ -33,10 +33,10 @@ $(".standpoint a, .summary td a").click(function(e){
 
 		if (answers.length === questions.length) {  // display questions with answers
 			for (var i = 0; i < questions.length; i++) {
-				$(d).append('<h3>' + $(questions[i]).html() + '</h3>');
-				$(d).append('<p>' + $(answers[i]).html() + '</p>');
+				$(d).append('<h3 class="question">' + $(questions[i]).html() + '</h3>');
+				$(d).append('<p class="answer">' + $(answers[i]).html() + '</p>');
 			}	
-		} 
+		}
 		else {  // display only questions
 			$(t).closest('section').find('h2:first').clone().appendTo(d);
 			$(t).closest('section').find('ol:first').clone().appendTo(d);	
