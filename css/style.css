@@ -479,10 +479,10 @@ table#overzicht {
 		background: #D90000;
 		color: #fff;
 	}
-		td.bad a:hover, .summary td.bad a:hover{
-			background: #D90000;
-			color: #fff;
-		}
+	td.bad a:hover, .summary td.bad a:hover{
+		background: #D90000;
+		color: #fff;
+	}
 	
 	td.good,
 	td.good a {
@@ -493,10 +493,10 @@ table#overzicht {
 		background: #59A618;
 		color: #fff;
 	}
-		td.good a:hover, .summary td.good a:hover{
-			background: #59A618;
-			color: #fff;
-		}
+	td.good a:hover, .summary td.good a:hover{
+		background: #59A618;
+		color: #fff;
+	}
 	
 	td.meh,
 	td.meh a {
@@ -507,10 +507,14 @@ table#overzicht {
 			background: #EE9342;
 			color: #fff;
 	}
-		td.meh a:hover, .summary td.meh a:hover{
-			background: #FC953B;
-			color: #fff;
-		}
+	td.meh a:hover, .summary td.meh a:hover{
+		background: #FC953B;
+		color: #fff;
+	}
+
+	.thinanswer {
+		opacity: 0.5;
+	}
 	
 	tr.summary td {
 		border-bottom: 1px dotted #fff;

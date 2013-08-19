@@ -40,10 +40,11 @@ $(".standpoint a, .summary td a").click(function(e){
 		else {  // display only questions
 			$(t).closest('section').find('h2:first').clone().appendTo(d);
 			$(t).closest('section').find('ol:first').clone().appendTo(d);	
+			$(d).append('<h3>Antwort der Partei</h3>');
 		}
 		
 
-		$(t).next().find(':not(ol,li)').clone().appendTo(d); // appendix 
+		$(t).next().find(':not(ol,ul,li)').clone().appendTo(d); // appendix // append whatever answer we got
 	}
 	
 	$(t).closest('section').find('a.back').clone().appendTo(d).click(function(e) {
