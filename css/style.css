@@ -503,6 +503,15 @@ table#overzicht {
 		background: #EE9342;
 		color: #F6D5B7;
 	}
+
+	td.nb,
+	td.nb a,
+	span.nb {
+		background: #D6D6D6;
+	}
+
+	
+
 	.summary td.meh a{
 			background: #EE9342;
 			color: #fff;
