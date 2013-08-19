@@ -563,6 +563,10 @@ section aside {
 	margin:0;
 }
 
+.coop img {
+	width: 170px;
+}
+
 section dl {
 	margin: 0 0 15px 0;
 }
