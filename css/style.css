@@ -549,6 +549,10 @@ nav.sub {
 	letter-spacing: -.03em;
 }
 
+div.appendix {
+	margin-top: 20px;
+}
+
 
 section aside {
 	color: #666;
@@ -571,7 +575,8 @@ section dl {
 	margin: 0 0 15px 0;
 }
 
-.content aside {
+.content aside,
+div.appendix {
 	background: #F0F0F0;
 	padding: 25px;
 	color: #444;

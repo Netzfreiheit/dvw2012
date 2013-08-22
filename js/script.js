@@ -43,8 +43,13 @@ $(".standpoint a, .summary td a").click(function(e){
 			$(d).append('<h3>Antwort der Partei</h3>');
 		}
 		
-
-		$(t).next().find(':not(ol,ul,li)').clone().appendTo(d); // appendix // append whatever answer we got
+		 // appendix // append whatever answer we got
+		if (t.indexOf('-summary') === -1) {
+			$(t).next().find('.appendix').clone().appendTo(d);
+		}
+		else {
+			$(t).next().clone().appendTo(d);
+		}	
 	}
 	
 	$(t).closest('section').find('a.back').clone().appendTo(d).click(function(e) {
