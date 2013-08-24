@@ -45,6 +45,9 @@ $(".standpoint a, .summary td a").click(function(e){
 		
 		 // appendix // append whatever answer we got
 		if (t.indexOf('-summary') === -1) {
+			if (answers.length !== questions.length) {
+				$(t).next().find(':not(ul,ol,li)').clone().appendTo(d);
+			}
 			$(t).next().find('.appendix').clone().appendTo(d);
 		}
 		else {
