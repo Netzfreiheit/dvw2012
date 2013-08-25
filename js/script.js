@@ -16,6 +16,8 @@ $(".standpoint a, .summary td a").click(function(e){
 	var d = $( '<div class="inner">' ); // wrapper
 	var t = $(e.target).attr('href');  // id / anchor
 	var questions, answers; 
+
+	setWindowTitle(t);
 	
 	$(t).closest('section').find('h1').clone().appendTo(d);
 	$(t).closest('section').find('aside').clone().appendTo(d);
@@ -114,4 +116,14 @@ if (document.location.hash != '') {
 function clearHash () { 
 	window.location.hash = '';
 	history.pushState('', document.title, window.location.pathname);
+	window.document.title = orig_title;
+}
+
+
+var orig_title = window.document.title;
+function setWindowTitle (ref) {
+	ref = ref.split('-');
+	var party = $('th#' + ref[0]).html()
+		  , topic = $('td#' + ref[1] + ' a').html();
+	window.document.title = orig_title.replace('|', '| ' + party + '»' + topic + ' |')
 }
