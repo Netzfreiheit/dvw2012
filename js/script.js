@@ -107,7 +107,7 @@ $('#overview td[class!=topic]').bind("mouseenter",function() {
 	
 //fake click to load page with relevant section open if hash in URL	
 if (document.location.hash != '') {
-	var targ = 'a[href*='+document.location.hash+']';
+	var targ = 'a[href*='+(document.location.hash || '').replace('!','')+']';
 	if($(targ).length>0) {
 		$(targ).click();				
 	}
