@@ -17,7 +17,7 @@ $(".standpoint a, .summary td a").click(function(e){
 	var t = $(e.target).attr('href');  // id / anchor
 	var questions, answers; 
 
-	setWindowTitle(t);
+	window.document.title = getWindowTitle(t);
 	
 	$(t).closest('section').find('h1').clone().appendTo(d);
 	$(t).closest('section').find('aside').clone().appendTo(d);
@@ -63,9 +63,12 @@ $(".standpoint a, .summary td a").click(function(e){
 		e.preventDefault();
 		$('#overlay').scrollTop(0);
 	});
+
+	$(d).append('<div id="disqus_thread"></div>');
 	
 	$('#overlay').append(d);	
 	$('#overlay').overlay().load();	
+	resetThread(t);
 });	
 
 $("nav.sub a").click(function(e){
@@ -119,9 +122,21 @@ function clearHash () {
 	window.document.title = "Netzpolitik Wahlmonitor 2013 | Initiative für Netzfreiheit";
 }
 
-function setWindowTitle (ref) {
+function getWindowTitle (ref) {
 	ref = ref.split('-');
 	var party = $('th#' + ref[0]).html()
 		  , topic = $('td#' + ref[1] + ' a').html();
-	window.document.title = "Netzpolitik Wahlmonitor 2013 | Initiative für Netzfreiheit".replace('|', '| ' + party + '»' + topic + ' |')
+	return "Netzpolitik Wahlmonitor 2013 | Initiative für Netzfreiheit".replace('|', '| ' + party + '»' + topic + ' |')
+}
+
+function resetThread (id) {
+	DISQUS.reset({
+    reload: true,
+    config: function () {  
+      this.page.identifier = id;
+      this.page.url = 'https://wahlmonitor.at/beta#' + id;
+      this.page.title = getWindowTitle (id);
+      this.language = "de";
+    }
+  });
 }
