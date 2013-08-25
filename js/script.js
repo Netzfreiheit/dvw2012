@@ -130,10 +130,10 @@ function getWindowTitle (ref) {
 }
 
 function resetThread (id) {
-  if (typeof DISQUS === undefined) {
+  if (typeof DISQUS === 'undefined') {
   	loadDisqus(id);
   }
-  else if (typeof DISQUS !== undefined) {
+  else if (typeof DISQUS !== 'undefined') {
     DISQUS.reset({
       reload: true,
       config: function () {  
@@ -154,6 +154,7 @@ function loadDisqus (id) {
   var disqus_identifier = id || 'main';
   var disqus_url = 'https://wahlmonitor.at/beta/';
   var disqus_developer = '1';
+console.log('npwahl', id, disqus_identifier);
 
   
 var disqus_config = function () { 
