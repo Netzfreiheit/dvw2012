@@ -42,7 +42,9 @@ $(".standpoint a, .summary td a").click(function(e){
 		else {  // display only questions
 			$(t).closest('section').find('h2:first').clone().appendTo(d);
 			$(t).closest('section').find('ol:first').clone().appendTo(d);	
-			$(d).append('<h3>Antwort der Partei</h3>');
+			if (!$(t + ' span.nb').length) {
+				$(d).append('<h3>Antwort der Partei</h3>');	
+			}
 		}
 		
 		// appendix // append whatever answer we got
