@@ -130,6 +130,8 @@ function getWindowTitle (ref) {
 }
 
 function resetThread (id) {
+  id = (id || '').replace('#','');
+
   if (typeof DISQUS === 'undefined') {
   	loadDisqus(id);
   }
@@ -138,7 +140,7 @@ function resetThread (id) {
       reload: true,
       config: function () {  
         this.page.identifier = id;
-        this.page.url = 'https://wahlmonitor.at/beta#' + id;
+        this.page.url = 'https://wahlmonitor.at/beta#!' + id;
         this.page.title = getWindowTitle (id);
         this.language = "de";
       }
@@ -152,10 +154,8 @@ function loadDisqus (id) {
 
   var disqus_shortname = 'netzpolitikwahlmonitor2013';
   var disqus_identifier = id || 'main';
-  var disqus_url = 'https://wahlmonitor.at/beta/';
+  var disqus_url = 'https://wahlmonitor.at/beta/#!' + (id |'');
   var disqus_developer = '1';
-console.log('npwahl', id, disqus_identifier);
-
   
 var disqus_config = function () { 
   this.language = "de";
