@@ -116,14 +116,12 @@ if (document.location.hash != '') {
 function clearHash () { 
 	window.location.hash = '';
 	history.pushState('', document.title, window.location.pathname);
-	window.document.title = orig_title;
+	window.document.title = "Netzpolitik Wahlmonitor 2013 | Initiative für Netzfreiheit";
 }
 
-
-var orig_title = window.document.title;
 function setWindowTitle (ref) {
 	ref = ref.split('-');
 	var party = $('th#' + ref[0]).html()
 		  , topic = $('td#' + ref[1] + ' a').html();
-	window.document.title = orig_title.replace('|', '| ' + party + '»' + topic + ' |')
+	window.document.title = "Netzpolitik Wahlmonitor 2013 | Initiative für Netzfreiheit".replace('|', '| ' + party + '»' + topic + ' |')
 }
