@@ -130,13 +130,17 @@ function getWindowTitle (ref) {
 }
 
 function resetThread (id) {
-	DISQUS.reset({
-    reload: true,
-    config: function () {  
-      this.page.identifier = id;
-      this.page.url = 'https://wahlmonitor.at/beta#' + id;
-      this.page.title = getWindowTitle (id);
-      this.language = "de";
-    }
-  });
+  if (typeof DISQUS !== undefined) {
+    DISQUS.reset({
+      reload: true,
+      config: function () {  
+        this.page.identifier = id;
+        this.page.url = 'https://wahlmonitor.at/beta#' + id;
+        this.page.title = getWindowTitle (id);
+        this.language = "de";
+      }
+    });  
+  } else {
+    console.log('couldn\'t load disqus threads');
+  }
 }
