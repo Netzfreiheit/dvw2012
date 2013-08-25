@@ -130,7 +130,10 @@ function getWindowTitle (ref) {
 }
 
 function resetThread (id) {
-  if (typeof DISQUS !== undefined) {
+  if (typeof DISQUS === undefined) {
+  	loadDisqus(id);
+  }
+  else if (typeof DISQUS !== undefined) {
     DISQUS.reset({
       reload: true,
       config: function () {  
@@ -140,7 +143,26 @@ function resetThread (id) {
         this.language = "de";
       }
     });  
-  } else {
-    console.log('couldn\'t load disqus threads');
   }
+}
+
+function loadDisqus (id) {
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+       // required: replace example with your forum shortname
+
+  var disqus_shortname = 'netzpolitikwahlmonitor2013';
+  var disqus_identifier = id || 'main';
+  var disqus_url = 'https://wahlmonitor.at/beta/';
+  var disqus_developer = '1';
+
+  
+var disqus_config = function () { 
+  this.language = "de";
+};
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
 }
