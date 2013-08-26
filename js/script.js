@@ -161,6 +161,7 @@ function loadDisqus (id) {
   
 var disqus_config = function () { 
   this.language = "de";
+  this.callbacks.onNewComment = [function() { return 0; }];
 };
   /* * * DON'T EDIT BELOW THIS LINE * * */
   (function() {
