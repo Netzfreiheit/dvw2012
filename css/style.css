@@ -45,7 +45,6 @@ body { margin: 0; font-size: 14px; line-height: 20px; }
 
 a { color: #005BCE; text-decoration: none; }
 a:visited { color: #005BCE; }
-.summary :not(:first-child) a:visited, .standpoint td:not(:first-child) a:visited  { color: #fff; }
 a:hover { text-decoration: underline }
 a:focus { outline: thin dotted; }
 
@@ -508,6 +507,7 @@ table#overzicht {
 	td.nb a,
 	span.nb {
 		background: #D6D6D6;
+		color: #fff;
 	}
 
 	
