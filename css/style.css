@@ -504,20 +504,25 @@ table#overzicht {
 	}
 
 	td.nb,
-	td.nb a,
-	span.nb {
+	td.nb a {
 		background: #D6D6D6;
 		color: #fff;
 	}
 
-	
+	td.nb a:hover, .summary td.nb a:hover{
+		background: #C4C2C2;
+	}
+
+	span.nb {
+		color: #858585;;
+	}
 
 	.summary td.meh a{
 			background: #EE9342;
 			color: #fff;
 	}
 	td.meh a:hover, .summary td.meh a:hover{
-		background: #FC953B;
+		background: #E97C1C;
 		color: #fff;
 	}
 
