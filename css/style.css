@@ -513,8 +513,14 @@ table#overzicht {
 		background: #C4C2C2;
 	}
 
-	span.nb {
+
+	dt > span.nb {
 		color: #858585;;
+	}
+
+	.description span.nb {
+		background: #C4C2C2;;
+		color: #fff;
 	}
 
 	.summary td.meh a{
