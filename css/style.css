@@ -797,6 +797,16 @@ footer a.bof {
 	background: url(../img/ifnf_logo_rgb.png) no-repeat;
 }
 
+.ifnf_logo {
+	display: block;
+	background: url(../img/pressefotos/IFNF-Logo-Pack/ifnf-logo-breit.svg) no-repeat;
+}
+
+.lt-ie9 .ifnf_logo {
+	display: block;
+	background: url(../img/pressefotos/IFNF-Logo-Pack/IFNF-Logo_breit_highres.jpg) no-repeat;
+}
+
 footer .license {
 	margin: 0 10px 0 0;
 }
