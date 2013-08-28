@@ -49,10 +49,16 @@ $(".standpoint a, .summary td a").click(function(e){
 		
 		// appendix // append whatever answer we got
 		if (t.indexOf('-summary') === -1) {
-			if (answers.length !== questions.length) {
-				$(t).next().find(':not(ul,ol,li,.appendix,.appendix *)').clone().appendTo(d);
+			if ($(t).next().find('.theanswer').length) {
+				$(t).next().find('.theanswer:not(.appendix)').clone().appendTo(d);
 			}
-			$(t).next().find('.appendix').clone().appendTo(d);
+			else if (answers.length !== questions.length) {
+				$(t).next().find(':not(ol,ul,li,.appendix,.appendix *)').clone().appendTo(d);
+				$(t).next().find('.appendix').clone().appendTo(d);
+			}
+			else {
+				$(t).next().find('.appendix').clone().appendTo(d);	
+			}
 		}
 		else {
 			$(t).next().clone().appendTo(d);
