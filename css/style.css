@@ -53,7 +53,7 @@ a:hover, a:active { outline: 0; }
 
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
-blockquote { margin: 1em 40px; }
+blockquote { margin: 1em 40px; font-style:italic;}
 dfn { font-style: italic; }
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 ins { background: #ff9; color: #000; text-decoration: none; }
@@ -591,6 +591,10 @@ div.appendix {
 	margin: -10px 0 0 0;
 }
 
+div.appendum {
+	margin: 15px 0 10px 15px;	
+}
+
 div.appendix {
 	margin-top: 20px;
 }
@@ -620,9 +624,9 @@ section aside + dt,
 }
 
 
-dt .good { color: #59A618; text-transform: uppercase; }
-dt .bad { color: #D90000; text-transform: uppercase; }
-dt .meh { color: #E9954C; text-transform: uppercase; }
+dt .good { color: #59A618; }
+dt .bad { color: #D90000; }
+dt .meh { color: #E9954C; }
 
 section dd {
 	margin: 0 0 15px 0;
@@ -920,4 +924,8 @@ footer .largetosti a:hover {
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
+}
+
+.tooltip {
+	border-bottom: 1px dashed #999;
 }
